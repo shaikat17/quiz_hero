@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Quiz Hero Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./index.js" defer></script>
+
+    <!-- You don't need to change noChange.js file. It's fine -->
+    <script src="./noChange.js" defer></script>
+    <!-- You don't need to change noChange.js file. It's fine -->
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              common: ["Rubik", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-white font-common">
+    <header class="h-16 flex items-center shadow-sm">
+      <nav class="flex justify-between items-center w-9/12 mx-auto">
+        <div class="text-zinc-800 font-bold uppercase">
+          <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+          <p class="text-[10px] font-normal capitalize -mt-1">
+            Get ready to Quiz and be amazed!
+          </p>
+        </div>
+        <a href="/">
+        <button
+          class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white"
+        >
+          Home
+        </button></a>
+      </nav>
+    </header>
+    <!-- Header/Navbar section end -->
+
+    <section
+      class="lg:w-9/12 md:w-[90%] w-[95%] mx-auto text-center"
+      id="rulesContainer"
+    >
+      <h1 class="text-center my-8 text-xl">Welcome to Quiz Hero's Blog</h1>
+      <div class="lg:w-[80%] md:w-[90%] w-[90%] mx-auto text-left">
+        <!-- Question and answer section -->
+        <ul class="text-sm my-10">
+          <li class="my-4 font-bold">
+            <span class="bg-orange-200 px-2 rounded">Question 1:</span> Difference among map, forEach, filter, find?
+          </li>
+          <li class="my-4 ml-4">
+            <span class="bg-green-200 px-2 rounded">Ans:</span> 
+            <span class="bg-lime-200 block px-2 rounded w-20 text-center">ForEach</span> <span class="block">1. Foreach takes a callback function and run that callback function on each element of array one by one.</span>
+            <span class="block">2. For every element on the array we are calling a callback which gets element & its index provided by foreach. </span>
+            <span class="bg-lime-200 block px-2 rounded w-20 text-center">Filter</span> <span class="block">1. Filter provide a callback for every element and returns a filtered array.</span>
+            <span class="block">2. Filter does not update the existing array it will return a new filtered array every time. </span>
+            <span class="bg-lime-200 block px-2 rounded w-20 text-center">Map</span> <span class="block">1. Map like filter & foreach takes a callback and run it against every element on the array but whats makes it unique is it generate a new array based on existing array.</span>
+            <span class="block">2. Like filter, map also returns an array. The provided callback to map modifies the array elements and save them into the new array upon completion that array get returned as the mapped array. </span>
+            <span class="bg-lime-200 block px-2 rounded w-20 text-center">Find</span> <span class="block">1. The find() method returns the value of the first element that passes a test.</span>
+            <span class="block">2. The find() method returns undefined if no elements are found. </span>
+          </li>
+          <li class="my-4 font-bold">
+            <span class="bg-orange-200 px-2 rounded">Question 2:</span> Difference among localStorage, sessionStorage and cookies?
+          </li>
+          <li class="my-4 ml-4">
+            <span class="bg-green-200 px-2 rounded">Ans:</span> 
+            <span class="bg-lime-200 block px-2 rounded w-32 text-center">Local storage</span> <span class="block">Local storage is the most recent mechanism. It allows for larger amounts of data to be stored, but the data is not deleted when the browser is closed. Local storage is useful for storing data that the user will need to access later, such as offline data.</span>
+            <span class="bg-lime-200 block px-2 rounded w-32 text-center">Session storage</span> <span class="block">Session storage is similar to cookies, but the data is only stored for the current session. This means that the data will be deleted when the user closes the browser. Session storage is useful for storing data that is sensitive, such as login credentials.</span>
+            <span class="bg-lime-200 block px-2 rounded w-20 text-center">Cookies</span> <span class="block">1. Cookies are the oldest and most well-known mechanism. They are simple to use and well supported by browsers. However, they are limited to 4KB of data and are often used to store data that is not sensitive, such as user preferences.</span>
+          </li>
+          <li class="my-4 font-bold">
+            <span class="bg-orange-200 px-2 rounded">Question 3:</span> What is event loop? How does it work?
+          </li>
+          <li class="my-4 ml-4">
+            <span class="bg-green-200 px-2 rounded">Ans:</span> 
+            <span class="bg-lime-200 block px-2 rounded w-32 text-center">Event Loop</span> <span class="block">event loop is a mechanism that allows the code to run asynchronously by processing events and callbacks. The event loop is a critical part of the JavaScript runtime environment and is responsible for handling user input, network requests, and other asynchronous tasks.</span>
+            <span class="bg-lime-200 block px-2 rounded w-32 text-center">It's working process</span> <span class="block">The event loop checks the call stack and event queue, executes any synchronous code, and adds asynchronous code to the event queue. When the call stack is empty, the event loop takes the first task from the event queue and adds it to the call stack, which will be executed immediately. The process repeats until the call stack and event queue are empty. The event loop allows JavaScript to handle asynchronous tasks without blocking the main thread, making web applications more responsive and efficient.</span>
+          </li>
+          <li class="my-4 font-bold">
+            <span class="bg-orange-200 px-2 rounded">Question 4:</span> What does the quiz timer function do?
+          </li>
+          <li class="my-4 ml-4">
+            <span class="bg-green-200 px-2 rounded">Ans:</span> <span class="block">It is a function which is counting the total time a participant is taking to comolete the quiz. At first the quiz timer function is checking a value. If the value is true then it's stop the function else it's showing a timer on the top-right side of the page. It also checking if a participant is taking more than 1 minutes. If the participant is taking more than 1 minutes then the function showing warning buy changing the timer color. (red)</span>
+          </li>
+          <li class="my-4 font-bold">
+            <span class="bg-orange-200 px-2 rounded">Question 5:</span> What does the chooseQuiz function do?
+          </li>
+          <li class="my-4 ml-4">
+            <span class="bg-green-200 px-2 rounded">Ans:</span> <span class="block">The JavaScript function chooseQuiz takes two parameters and is likely part of an application that allows users to select answers for quizzes and displays the answers to the user. It checks whether an object with the same id as the current quiz exists in the answers array, and if it does, updates the object with the provided givenAns value. If it doesn't exist, it adds a new object to the answers array representing the current quiz with the provided givenAns value. The displayAnswers function is called with the answers array as an argument.</span>
+          </li>
+        </ul>
+    </section>
+</body>
+</html>
